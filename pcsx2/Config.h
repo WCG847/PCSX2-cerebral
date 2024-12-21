@@ -638,6 +638,8 @@ struct Pcsx2Config
 		BITFIELD32()
 		bool
 			ExtraMemory : 1;
+		bool
+			UnlockedMemory : 1;
 		BITFIELD_END
 
 		RecompilerOptions Recompiler;

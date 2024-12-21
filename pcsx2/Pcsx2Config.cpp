@@ -602,6 +602,7 @@ Pcsx2Config::CpuOptions::CpuOptions()
 	VU0FPCR = DEFAULT_VU_FP_CONTROL_REGISTER;
 	VU1FPCR = DEFAULT_VU_FP_CONTROL_REGISTER;
 	ExtraMemory = false;
+	UnlockedMemory = false;
 }
 
 void Pcsx2Config::CpuOptions::ApplySanityCheck()
@@ -631,6 +632,7 @@ void Pcsx2Config::CpuOptions::LoadSave(SettingsWrapper& wrap)
 	read_fpcr(VU1FPCR, "VU1");
 
 	SettingsWrapBitBool(ExtraMemory);
+	SettingsWrapBitBool(UnlockedMemory);
 
 	Recompiler.LoadSave(wrap);
 }
