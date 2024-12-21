@@ -22,9 +22,9 @@ AchievementLoginDialog::AchievementLoginDialog(QWidget* parent, Achievements::Lo
 	if (reason == Achievements::LoginRequestReason::TokenInvalid)
 	{
 		m_ui.instructionText->setText(
-			tr("<strong>Your RetroAchievements login token is no longer valid.</strong> You must re-enter your "
-			   "credentials for achievements to be tracked. Your password will not be saved in PCSX2, an access token "
-			   "will be generated and used instead."));
+			tr("<strong>Your RetroAchievements login token has expired or is no longer valid.</strong> Please re-enter "
+			   "your credentials to continue tracking achievements. Note that your password will not be saved in PCSX2. "
+			   "An access token will be generated and used instead for security purposes."));
 	}
 
 	m_login = m_ui.buttonBox->addButton(tr("&Login"), QDialogButtonBox::AcceptRole);
